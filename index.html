@@ -6,8 +6,8 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
-Author 1
-Author 2
+Leanna Doan
+Tim Riedel
  
 Further Information:
 http://diystream.cns.utexas.edu/
@@ -17,15 +17,142 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of this code is to help users distinguish between COVID-19 and influenza. The app allows users to answer a series of questions regarding their symptoms and, based on this information, calculates and displays the probability that the user has COVID-19 and the probability that they have influenza.
  
 Known Issues:
-blah, blah, blah, blah
+None.
 -->
 
-   <head> 
-      
-	   PUT YOUR OLD CODE IN HERE
+   <head> <!--beginning of header section-->
+      <title>Hello World</title>  <!--displays title of page-->
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!--important information about page that is not intended to be displayed-->
+      <meta name="apple-mobile-web-app-capable" content="yes"> <!--important information about page that is not intended to be displayed-->
+      <link rel="stylesheet" href="w3.css"> <!--information for web-related aspects of app; reasonable display size-->
+      <link rel="stylesheet" href="w3-colors-flat.css"> <!--information for web-related aspects of app; signals to smartphones that they should allow user to save shortcut on homepage-->
+   </head> <!--end of header section-->
+
+
+<script> //beginning of JavaScript section
+        var allergy_count = 0; //"allergy_count" variable declaration & initialization
+        var cold_count = 0; //"cold_count" variable declaration & initialization
+
+
+        function allergyAdd(){ //"allergyAdd" function declaration
+            allergy_count = allergy_count + 1; //code that is executed (+1 to allergy count)
+
+        }
+
+        function coldAdd(){ //"coldAdd" function declaration
+            cold_count = cold_count + 1; //code that is executed (+1 to cold count)
+        }
+	
+	function resultspercentage(){ //"resultspercentage" function declaration
+		var resultText = document.getElementById("results"); //captures content of paragraph on p. 5
+		var coldpercentage = (cold_count/4)*100; //calculates probability of cold
+		var allergypercentage = (allergy_count/4)*100; //calculates probability of allergies
+		resultText.innerHTML = "Probability it is allergies =" + allergypercentage + "%" + "<br> Probability it is a cold =" + coldpercentage + "%"; //innerHTML command; changes what is b/w <p id="results"></p> tags
+	}
+  </script> <!--end of JavaScript section-->
+
+
+<style> /*beginning of CSS section*/
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style> <!--end of CSS section-->
+
+<body> <!--beginning of body (contains content to be displayed)-->
+<!--beginning of division--> <div id="header" class="w3-container w3-flat-carrot"> <!--title page header-->
+	<h1>Cold or Allergies?</h1> <!--topmost heading on title page-->
+</div> <!--end of division-->
+	
+<div id="content" class="w3-container"> <!--beginning of division-->
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p> <!--text on title page-->
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--"Get Started" button-->
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p> <!--text on title page-->
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!--text on title page-->
+
+<div class="page" id="one"> <!--beginning of division (page 1)-->
+	<div id="header" class="w3-container w3-flat-carrot"> <!--beginning of division (header)-->
+		<h1>Question 1</h1> <!--topmost heading on page 1-->
+	</div> <!--end of division (header)-->
+	
+    	<div id="content" class="w3-container"> <!--beginning of division (content)-->
+        	<p>Are your eyes watery or itchy?</p> <!--text on page (question)-->
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to allergy count-->
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to cold count-->
+    	</div> <!--end of division (content)-->
+</div> <!--end of division (page 1)-->
+
+<div class="page" id="two"> <!--beginning of division (page 2)-->
+	<div class="w3-container w3-flat-carrot"> <!--beginning of division-->
+		<h1>Question 2</h1> <!--topmost heading on page 2-->
+	</div> <!--end of division-->
+	
+	<div id="content" class="w3-container"> <!--beginning of division (content)-->
+		<p>Do you have a fever?</p> <!--text on page (question)-->
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to cold count-->
+         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to allergy count-->
+	</div> <!--end of division (content)-->
+</div>	<!--end of division (page 2)-->
+	
+<div class="page" id="three"> <!--beginning of division (page 3)-->
+	<div class="w3-container w3-flat-carrot"> <!--beginning of division-->
+		<h1>Question 3</h1> <!--topmost heading on page 3-->
+	</div> <!--end of division-->
+	
+	<div id="content" class="w3-container"> <!--beginning of division (content)-->
+		<p>Do you have a sore throat?</p> <!-- text on page (question) -->
+		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to cold count-->
+         	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to allergy count-->
+	</div> <!--end of division (content)-->
+</div> <!--end of division (page 3)-->
+	
+<div class="page" id="four"> <!--beginning of division (page 4)-->
+	<div class="w3-container w3-flat-carrot"> <!--beginning of division-->
+		<h1>Question 4</h1> <!--topmost heading on page 4-->
+	</div> <!--end of division-->
+	
+	<div id="content" class="w3-container"> <!--beginning of division (content)-->
+		<p>Are your symptoms seasonal or chronic?</p> <!-- text on page (question) -->
+		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to allergy count-->
+         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to cold count-->
+	</div> <!--end of division (content)-->
+</div> <!--end of division (page 4)-->
+	
+<div class="page" id="five"> <!--beginning of division (page 5)-->
+	<div class="w3-container w3-flat-carrot"> <!--beginning of division-->
+		<h1>Results</h1> <!--topmost heading on page 5-->
+	</div> <!--end of division-->
+	
+	<div id="content" class="w3-container"> <!--beginning of division (content)-->
+		<a onclick="resultspercentage();" class="w3-btn w3-black">Results</a> <!--button to view results-->
+		<p id="results"></p> <!--indicates where results will be displayed-->
+	</div> <!--end of division (content)-->
+</div> <!--end of division (page 5)-->
+
+<footer class="w3-bottom w3-container w3-flat-carrot"> <!--beginning of footer-->
+	<p>DIY!</p> <!--text in footer-->
+</footer> <!--end of footer-->
 	   
-   </body>
-</html>
+   </body> <!--end of body-->
+</html> <!--end of HTML file-->
