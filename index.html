@@ -65,25 +65,29 @@ None.
 
 
 <style> /*beginning of CSS section*/
-.body {
-     margin: 0em;
-}
-
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-}
+	.body {
+		margin: 0em;
+	}
+	
+	.page {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: -100vw;
+		overflow-y: auto;
+		z-index: 0;
+		background-color: hsl(0,0%,100%);
+	}
+	
+	.page:target {
+		left: 0vw;
+		z-index: 1;
+	}
+	img, object{
+            	max-height:90%;
+        	max-width:90%;
+        }
 </style> <!--end of CSS section-->
 
 <body> <!--beginning of body (contains content to be displayed)-->
