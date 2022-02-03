@@ -33,24 +33,24 @@ None.
 
 
 <script> //beginning of JavaScript section
-        var allergy_count = 0; //"allergy_count" variable declaration & initialization
-        var cold_count = 0; //"cold_count" variable declaration & initialization
+        var COVID_count = 0; //"COVID_count" variable declaration & initialization
+        var flu_count = 0; //"flu_count" variable declaration & initialization
 
 
-        function allergyAdd(){ //"allergyAdd" function declaration
-            allergy_count = allergy_count + 1; //code that is executed (+1 to allergy count)
+        function COVIDAdd(){ //"COVIDAdd" function declaration
+            COVID_count = COVID_count + 1; //code that is executed (+1 to COVID count)
 
         }
 
-        function coldAdd(){ //"coldAdd" function declaration
-            cold_count = cold_count + 1; //code that is executed (+1 to cold count)
+        function fluAdd(){ //"fluAdd" function declaration
+            flu_count = flu_count + 1; //code that is executed (+1 to flu count)
         }
 	
 	function resultspercentage(){ //"resultspercentage" function declaration
 		var resultText = document.getElementById("results"); //captures content of paragraph on p. 5
-		var coldpercentage = (cold_count/4)*100; //calculates probability of cold
-		var allergypercentage = (allergy_count/4)*100; //calculates probability of allergies
-		resultText.innerHTML = "Probability it is allergies =" + allergypercentage + "%" + "<br> Probability it is a cold =" + coldpercentage + "%"; //innerHTML command; changes what is b/w <p id="results"></p> tags
+		var flupercentage = (flu_count/4)*100; //calculates probability of flu
+		var COVIDpercentage = (COVID_count/4)*100; //calculates probability of COVID
+		resultText.innerHTML = "Probability it is influenza =" + flupercentage + "%" + "<br> Probability it is COVID =" + COVIDpercentage + "%"; //innerHTML command; changes what is b/w <p id="results"></p> tags
 	}
   </script> <!--end of JavaScript section-->
 
@@ -97,9 +97,9 @@ None.
 	</div> <!--end of division (header)-->
 	
     	<div id="content" class="w3-container"> <!--beginning of division (content)-->
-        	<p>Are your eyes watery or itchy?</p> <!--text on page (question)-->
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to allergy count-->
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to cold count-->
+        	<p>Are you experiencing a loss of taste or smell?</p> <!--text on page (question)-->
+		<a href="#two"  onclick="COVIDAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to COVID count-->
+         	<a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to flu count-->
     	</div> <!--end of division (content)-->
 </div> <!--end of division (page 1)-->
 
@@ -110,8 +110,8 @@ None.
 	
 	<div id="content" class="w3-container"> <!--beginning of division (content)-->
 		<p>Do you have a fever?</p> <!--text on page (question)-->
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to cold count-->
-         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to allergy count-->
+		<a href="#three"  onclick="fluAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to flu count-->
+         	<a href="#three"  onclick="COVIDAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to COVID count-->
 	</div> <!--end of division (content)-->
 </div>	<!--end of division (page 2)-->
 	
@@ -122,8 +122,8 @@ None.
 	
 	<div id="content" class="w3-container"> <!--beginning of division (content)-->
 		<p>Do you have a sore throat?</p> <!-- text on page (question) -->
-		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to cold count-->
-         	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to allergy count-->
+		<a href="#four"  onclick="fluAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to flu count-->
+         	<a href="#four"  onclick="COVIDAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to COVID count-->
 	</div> <!--end of division (content)-->
 </div> <!--end of division (page 3)-->
 	
@@ -134,8 +134,8 @@ None.
 	
 	<div id="content" class="w3-container"> <!--beginning of division (content)-->
 		<p>Are your symptoms seasonal or chronic?</p> <!-- text on page (question) -->
-		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to allergy count-->
-         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to cold count-->
+		<a href="#five"  onclick="COVIDAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to COVID count-->
+         	<a href="#five"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to flu count-->
 	</div> <!--end of division (content)-->
 </div> <!--end of division (page 4)-->
 	
