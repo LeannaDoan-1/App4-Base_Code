@@ -23,23 +23,23 @@ Known Issues:
 None.
 -->
 
-   <head> <!--beginning of header section-->
-      <title>Hello World</title>  <!--displays title of page-->
-      <meta name="viewport" content="width=device-width, initial-scale=1"> <!--important information about page that is not intended to be displayed-->
-      <meta name="apple-mobile-web-app-capable" content="yes"> <!--important information about page that is not intended to be displayed-->
-      <link rel="stylesheet" href="w3.css"> <!--information for web-related aspects of app; reasonable display size-->
-      <link rel="stylesheet" href="w3-colors-flat.css"> <!--information for web-related aspects of app; signals to smartphones that they should allow user to save shortcut on homepage-->
-   </head> <!--end of header section-->
+<head> <!--beginning of header section-->
+	<title>Hello World</title>  <!--displays title of page-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!--important information about page that is not intended to be displayed-->
+	<meta name="apple-mobile-web-app-capable" content="yes"> <!--important information about page that is not intended to be displayed-->
+	link rel="stylesheet" href="w3.css"> <!--information for web-related aspects of app; reasonable display size-->
+	<link rel="stylesheet" href="w3-colors-flat.css"> <!--information for web-related aspects of app; signals to smartphones that they should allow user to save shortcut on homepage-->
+</head> <!--end of header section-->
 
 
 <script> //beginning of JavaScript section
 	
-// The following code lets you know when the file was last modified.
-// This will help you know if you are looking at the new version of the file or if there is a delay on GitHub.
+	// The following code lets you know when the file was last modified.
+	// This will help you know if you are looking at the new version of the file or if there is a delay on GitHub.
       	var docMod = document.lastModified;
       	alert("This file last modified  " + docMod);
       	console.log("This file last modified  " + docMod);
-// If you find the alert box annoying, comment out that line and timestamp will still show up in the debugging console.
+	// If you find the alert box annoying, comment out that line and timestamp will still show up in the debugging console.
 
 	
         var COVID_count = 0; //"COVID_count" variable declaration & initialization
@@ -61,7 +61,7 @@ None.
 		var COVIDpercentage = (COVID_count/4)*100; //calculates probability of COVID
 		resultText.innerHTML = "Probability it is influenza =" + flupercentage + "%" + "<br> Probability it is COVID-19 =" + COVIDpercentage + "%"; //innerHTML command; changes what is b/w <p id="results"></p> tags
 	}
-  </script> <!--end of JavaScript section-->
+</script> <!--end of JavaScript section-->
 
 
 <style> /*beginning of CSS section*/
@@ -91,84 +91,81 @@ None.
 </style> <!--end of CSS section-->
 
 <body> <!--beginning of body (contains content to be displayed)-->
-<div id="header" class="w3-container w3-flat-carrot"> <!--beginning of division (header)-->
-	<h1>Influenza or COVID-19?</h1> <!--topmost heading on title page-->
-</div> <!--end of division (header)-->
-
-<br>
-<img src="https://www.clinisciences.com/upload/adobestock-331519615-su98vg.jpg" alt="Influenza vs. Coronavirus">
-	
-<div id="content" class="w3-container"> <!--beginning of division (content)-->
-	<p>Are you feeling like you might have the flu but wonder if it is COVID-19? Answer a few short questions to find out!</p> <!--text on title page-->
-	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--"Get Started" button-->
-	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p> <!--text on title page-->
- 	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!--text on title page-->
-
-<div class="page" id="one"> <!--beginning of division (page 1)-->
 	<div id="header" class="w3-container w3-flat-carrot"> <!--beginning of division (header)-->
-		<h1>Question 1</h1> <!--topmost heading on page 1-->
+		<h1>Influenza or COVID-19?</h1> <!--topmost heading on title page-->
 	</div> <!--end of division (header)-->
-	
-    	<div id="content" class="w3-container"> <!--beginning of division (content)-->
-        	<p>Are you experiencing a loss of taste or smell?</p> <!--text on page (question)-->
-		<a href="#two"  onclick="COVIDAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to COVID count-->
-         	<a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to flu count-->
-    	</div> <!--end of division (content)-->
-</div> <!--end of division (page 1)-->
 
-<div class="page" id="two"> <!--beginning of division (page 2)-->
-	<div class="w3-container w3-flat-carrot"> <!--beginning of division-->
-		<h1>Question 2</h1> <!--topmost heading on page 2-->
-	</div> <!--end of division-->
+	<br> <!--break before image-->
+	<img src="https://www.clinisciences.com/upload/adobestock-331519615-su98vg.jpg" alt="Influenza vs. Coronavirus"> <!--image-->
 	
 	<div id="content" class="w3-container"> <!--beginning of division (content)-->
-		<p>Do you have a sore throat?</p> <!--text on page (question)-->
-		<a href="#three"  onclick="fluAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to flu count-->
-         	<a href="#three"  onclick="COVIDAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to COVID count-->
-	</div> <!--end of division (content)-->
-</div>	<!--end of division (page 2)-->
-	
-<div class="page" id="three"> <!--beginning of division (page 3)-->
-	<div class="w3-container w3-flat-carrot"> <!--beginning of division-->
-		<h1>Question 3</h1> <!--topmost heading on page 3-->
-	</div> <!--end of division-->
-	
-	<div id="content" class="w3-container"> <!--beginning of division (content)-->
-		<p>Have you been sneezing?</p> <!-- text on page (question) -->
-		<a href="#four"  onclick="fluAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to flu count-->
-         	<a href="#four"  onclick="COVIDAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to COVID count-->
-	</div> <!--end of division (content)-->
-</div> <!--end of division (page 3)-->
-	
-<div class="page" id="four"> <!--beginning of division (page 4)-->
-	<div class="w3-container w3-flat-carrot"> <!--beginning of division-->
-		<h1>Question 4</h1> <!--topmost heading on page 4-->
-	</div> <!--end of division-->
-	
-	<div id="content" class="w3-container"> <!--beginning of division (content)-->
-		<p>Are you experiencing shortness of breath or difficulty breathing?</p> <!-- text on page (question) -->
-		<a href="#five"  onclick="COVIDAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to COVID count-->
-         	<a href="#five"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to flu count-->
-	</div> <!--end of division (content)-->
-</div> <!--end of division (page 4)-->
-	
-<div class="page" id="five"> <!--beginning of division (page 5)-->
-	<div class="w3-container w3-flat-carrot"> <!--beginning of division-->
-		<h1>Results</h1> <!--topmost heading on page 5-->
-	</div> <!--end of division-->
-	
-	<div id="content" class="w3-container"> <!--beginning of division (content)-->
-		<a onclick="resultspercentage();" class="w3-btn w3-black">Results</a> <!--button to view results-->
-		<p id="results"></p> <!--indicates where results will be displayed-->
-	</div> <!--end of division (content)-->
-</div> <!--end of division (page 5)-->
+		<p>Are you feeling like you might have the flu but wonder if it is COVID-19? Answer a few short questions to find out!</p> <!--text on title page-->
+		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--"Get Started" button-->
+		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p> <!--text on title page-->
+		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!--text on title page-->
 
-<footer class="w3-bottom w3-container w3-flat-carrot"> <!--beginning of footer-->
-	<p>DIY!</p> <!--text in footer-->
-</footer> <!--end of footer-->
+	<div class="page" id="one"> <!--beginning of division (page 1)-->
+		<div id="header" class="w3-container w3-flat-carrot"> <!--beginning of division (heading)-->
+			<h1>Question 1</h1> <!--topmost heading on page 1-->
+		</div> <!--end of division (heading)-->
+	
+    		<div id="content" class="w3-container"> <!--beginning of division (content)-->
+        		<p>Are you experiencing a loss of taste or smell?</p> <!--text on page (question)-->
+			<a href="#two"  onclick="COVIDAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to COVID count-->
+         		<a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to flu count-->
+    		</div> <!--end of division (content)-->
+	</div> <!--end of division (page 1)-->
+
+	<div class="page" id="two"> <!--beginning of division (page 2)-->
+		<div class="w3-container w3-flat-carrot"> <!--beginning of division (heading)-->
+			<h1>Question 2</h1> <!--topmost heading on page 2-->
+		</div> <!--end of division (heading)-->
+	
+		<div id="content" class="w3-container"> <!--beginning of division (content)-->
+			<p>Do you have a sore throat?</p> <!--text on page (question)-->
+			<a href="#three"  onclick="fluAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to flu count-->
+         		<a href="#three"  onclick="COVIDAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to COVID count-->
+		</div> <!--end of division (content)-->
+	</div>	<!--end of division (page 2)-->
+	
+	<div class="page" id="three"> <!--beginning of division (page 3)-->
+		<div class="w3-container w3-flat-carrot"> <!--beginning of division (heading)-->
+			<h1>Question 3</h1> <!--topmost heading on page 3-->
+		</div> <!--end of division (heading)-->
+	
+		<div id="content" class="w3-container"> <!--beginning of division (content)-->
+			<p>Have you been sneezing?</p> <!-- text on page (question) -->
+			<a href="#four"  onclick="fluAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to flu count-->
+         		<a href="#four"  onclick="COVIDAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to COVID count-->
+		</div> <!--end of division (content)-->
+	</div> <!--end of division (page 3)-->
+	
+	<div class="page" id="four"> <!--beginning of division (page 4)-->
+		<div class="w3-container w3-flat-carrot"> <!--beginning of division (heading)-->
+			<h1>Question 4</h1> <!--topmost heading on page 4-->
+		</div> <!--end of division (heading)-->
+	
+		<div id="content" class="w3-container"> <!--beginning of division (content)-->
+			<p>Are you experiencing shortness of breath or difficulty breathing?</p> <!-- text on page (question) -->
+			<a href="#five"  onclick="COVIDAdd();" class="w3-btn w3-black"> Yes</a> <!--button to next page; adds 1 to COVID count-->
+         		<a href="#five"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button to next page; adds 1 to flu count-->
+		</div> <!--end of division (content)-->
+	</div> <!--end of division (page 4)-->
+	
+	<div class="page" id="five"> <!--beginning of division (page 5)-->
+		<div class="w3-container w3-flat-carrot"> <!--beginning of division (heading)-->
+			<h1>Results</h1> <!--topmost heading on page 5-->
+		</div> <!--end of division (heading)-->
+	
+		<div id="content" class="w3-container"> <!--beginning of division (content)-->
+			<a onclick="resultspercentage();" class="w3-btn w3-black">Results</a> <!--button to view results-->
+			<p id="results"></p> <!--indicates where results will be displayed-->
+		</div> <!--end of division (content)-->
+	</div> <!--end of division (page 5)-->
+
+	<footer class="w3-bottom w3-container w3-flat-carrot"> <!--beginning of footer-->
+		<p>DIY!</p> <!--text in footer-->
+	</footer> <!--end of footer-->
 	   
-   </body> <!--end of body-->
+</body> <!--end of body-->
 </html> <!--end of HTML file-->
